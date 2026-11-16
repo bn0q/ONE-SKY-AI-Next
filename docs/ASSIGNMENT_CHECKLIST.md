@@ -166,4 +166,6 @@
 
 **Verification ที่รันจริง:** `npm test` 38/38 · `npm run typecheck` · `npm run lint` · `npm run build` · `npm run test:e2e` 2/2 · `npm run docs` · curl `/api/process` + `/api/export` · Playwright screenshot 1440×900 + full page · failing-first proof ของ edge case "action item ไม่มีเจ้าของ"
 
+**Local commit:** `0c7174c feat: implement Meeting Notes Distiller Web assignment` (48 files, +10,488 lines) · branch `main` **[ahead 1]** · ยังไม่ push
+
 **ยังไม่ทำ (ต้องได้รับอนุมัติแยก):** `git push` — active account `adithep-tha_skyaidev` มีแค่ `pull` บน repo นี้ ต้อง `gh auth switch --user bn0q` ก่อน (§7 ข้อ 9 / README D13)

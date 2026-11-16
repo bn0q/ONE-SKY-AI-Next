@@ -4,7 +4,8 @@
 > อ่านเมื่อ: 2026-11-16 · เอกสาร 4 หน้า (Last modified: 10:41 AM Jun 1)
 > วิธีใช้: tick `[x]` ตามลำดับ · ทุกข้อใน **§6 Submission gate** ต้องเป็น `[x]` ก่อนส่ง
 > ปรับล่าสุด 2026-11-16: **SKIP ข้อ 0.6** (รัน `claude`) ตาม user → ใช้ **Monarch** ทำแทน
-> สถานะ 2026-11-16 18:00: **§0–§6 ครบทุกข้อ** · ยกเว้น §7 ข้อ 9 (push ยังไม่ได้ทำ ตาม D13)
+> สถานะ 2026-11-16 18:00: **§0–§6 ครบทุกข้อ**
+> สถานะ 2026-11-16 18:10: **push + PR สำเร็จ** → https://github.com/bn0q/ONE-SKY-AI-Next/pull/1 (base `main` ← head `feat/meeting-notes-distiller`)
 
 ---
 
@@ -146,7 +147,7 @@
 | 6 | ไฟล์แนบ sample transcript | ✅ ได้ 4 ไฟล์จริงจาก Lark Drive folder → `samples/` |
 | 7 | §4.1 "สร้าง SRS/PRD **ด้วย Claude**" → ใช้ Monarch แทนตามมติข้อ 2 | ✅ บันทึกใน README D11 |
 | 8 | `CLAUDE.md` / `.claude/skills/` ยังต้องมีครบตามชื่อ path ที่ assignment กำหนด แม้ผู้ทำจะเป็น Monarch | คงไว้ ห้ามเปลี่ยนชื่อ |
-| 9 | **Push สิทธิ์**: active account `adithep-tha_skyaidev` มีแค่ `pull` บน `bn0q/ONE-SKY-AI-Next` | ⚠️ ต้อง `gh auth switch --user bn0q` ก่อน push — รออนุมัติ user (ห้าม push เอง) |
+| 9 | **Push สิทธิ์**: `adithep-tha_skyaidev` มีแค่ `pull` → ต้องใช้ `bn0q` | ✅ user สั่ง "pr เลย" 2026-11-16 → `gh auth switch --user bn0q` (push: true) → push branch + เปิด PR #1 สำเร็จ |
 | 10 | npm registry เข้าถึงได้ (`npm ping` PONG) · `python-docx`/`openpyxl` ยังไม่มี → ใช้แพ็กเกจ Node (`docx`, `exceljs`) แทน | ✅ ตรวจแล้ว |
 
 
@@ -166,6 +167,6 @@
 
 **Verification ที่รันจริง:** `npm test` 38/38 · `npm run typecheck` · `npm run lint` · `npm run build` · `npm run test:e2e` 2/2 · `npm run docs` · curl `/api/process` + `/api/export` · Playwright screenshot 1440×900 + full page · failing-first proof ของ edge case "action item ไม่มีเจ้าของ"
 
-**Local commit:** `0c7174c feat: implement Meeting Notes Distiller Web assignment` (48 files, +10,488 lines) · branch `main` **[ahead 1]** · ยังไม่ push
+**Commits:** `0c7174c` (48 files, +10,488) + `d877fcb` (checklist sync) บน branch `feat/meeting-notes-distiller` · local `main` คืนให้ตรง `origin/main` แล้ว
 
-**ยังไม่ทำ (ต้องได้รับอนุมัติแยก):** `git push` — active account `adithep-tha_skyaidev` มีแค่ `pull` บน repo นี้ ต้อง `gh auth switch --user bn0q` ก่อน (§7 ข้อ 9 / README D13)
+**✅ Push + PR สำเร็จ (2026-11-16):** https://github.com/bn0q/ONE-SKY-AI-Next/pull/1 — OPEN, base `main`, head `feat/meeting-notes-distiller`, author `bn0q`, ไม่ใช่ draft · body จบด้วย `🤖 Created with Monarch` · PR ไม่มี CI checks (repo ไม่มี workflow) → ใช้ verification ในตารางข้างบนเป็นหลักฐาน
